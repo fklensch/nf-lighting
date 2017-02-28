@@ -1,0 +1,23 @@
+.THIS {
+    position: relative;
+    overflow: hidden;
+	
+}
+.THIS H2 {
+    font-weight: bold;
+}
+.THIS H3 {
+	font-weight: bold;    
+}
+.THIS .traffic-green{
+    background-color: #4bca81;
+}
+.THIS .traffic-yellow{
+    background-color: #ffb75d;
+}
+.THIS .traffic-red{
+    background-color: #d4504c;
+}
+.THIS .customerlevels{
+    font-size: 1rem;
+}
