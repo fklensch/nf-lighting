@@ -1,0 +1,17 @@
+{
+    "projectName": "NextFinance",
+    "username": "fklenschiii-4heq@force.com",
+    "id": "ce2ac3b0-fae6-11e6-a11d-b5d327c288b3",
+    "namespace": "",
+    "orgType": "developer",
+    "loginUrl": "https://login.salesforce.com/",
+    "instanceUrl": "https://fk-dev-spring17pre.my.salesforce.com",
+    "workspace": "C:\\Users\\fklenschiii\\Documents",
+    "subscription": [
+        "ApexClass",
+        "ApexComponent",
+        "ApexPage",
+        "ApexTrigger",
+        "StaticResource"
+    ]
+}

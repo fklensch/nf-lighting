@@ -1,0 +1,67 @@
+<aura:component controller="NextFinance" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="customerInteractionLevel" type="Object" />
+    <aura:attribute name="lastCallResolutionIndex" type="Object" />
+    <aura:attribute name="commentsAggregation" type="Object" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <div class="slds-box slds-theme--default">
+        <header>
+            <h1 class="slds-text-heading--small slds-m-bottom--small">Next Finance</h1>
+        </header>
+        <div class="slds-box--xx-small">
+            <div class="slds-grid slds-wrap slds-col">
+                <div class="slds-p-horizontal--small slds-box--small slds-size--1-of2 slds-theme--shade slds-text-align--center slds-col" aura:id="noOfAgentCalls">
+                    <div class="customerlevels">{!v.customerInteractionLevel.noOfAgentCalls}</div>
+                    <h2>Last Call Resolution Index</h2> 
+                </div>
+                <div class="slds-p-horizontal--small slds-theme--shade slds-box--small slds-size--2-of2 slds-text-align--center slds-col" aura:id="noOfDays">
+                    <div class="customerlevels">{!v.lastCallResolutionIndex.noOfDays}</div>
+                    <h2>Customer Interaction Level</h2> 
+                </div>
+            </div>
+        </div>
+        <div class="slds-box--xx-small">
+            <div> 
+                <h2 class="slds-section-title--divider">Key Customer Interactions</h2>
+            </div>
+            <div class="slds-grid slds-size--1-of1">
+                
+                <div class="slds-grid slds-wrap slds-grid--pull-padded slds-size--1-of-1">
+                    
+                    <br/>
+                    <div class="slds-p-horizontal--small slds-size--2-of-4">
+                        <h3  class="slds-text-title">Agent</h3>
+                        <p>Website({!v.commentsAggregation.agent.website}) 
+                            Extension({!v.commentsAggregation.agent.extension}) 
+                            Title({!v.commentsAggregation.agent.title}) 
+                            Contract({!v.commentsAggregation.agent.contract}) 
+                            Due Date ({!v.commentsAggregation.agent.dueDate}) 
+                            Address({!v.commentsAggregation.agent.address}) 
+                            Payment Made({!v.commentsAggregation.agent.pmtMade}) 
+                            Payment Discussed({!v.commentsAggregation.agent.pmtDiscussed}) 
+                            Payoff({!v.commentsAggregation.agent.payoff})
+                        </p>
+                        
+                    </div>
+                    <div class="slds-p-horizontal--small slds-size--1-of-4">
+                        <h3 class="slds-text-title">Website</h3>
+                        <p>Payment Made({!v.commentsAggregation.website.pmtMade}) 
+                            Payoff({!v.commentsAggregation.website.payoff})</p>
+                    </div>
+                    <div class="slds-p-horizontal--small slds-size--1-of-4">
+                        <h3  class="slds-text-title">VRU</h3>
+                        <p>Payment Made({!v.commentsAggregation.vru.pmtMade}) 
+                            Payoff({!v.commentsAggregation.vru.payoff})</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slds-spinner_container slds-hide" aura:id="spinner">
+            <div class="slds-spinner--brand slds-spinner slds-spinner--medium" aria-hidden="false" role="alert">
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </div>
+</aura:component>

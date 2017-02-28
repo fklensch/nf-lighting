@@ -1,0 +1,26 @@
+<apex:page >
+    <html xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+    <head>
+    <apex:includeLightning />
+    </head>
+    <body >
+      <div class="slds">
+        <div class="slds-form-element slds-m-top--xx-small">
+          <div class="slds-m-right--x-small" id="next_finance"></div>
+        </div>
+      </div>
+    </body>
+    <script>
+      function initLookup() {
+        
+        $Lightning.use("c:NextFinanceApp", function () {
+          $Lightning.createComponent("c:NextFinance", {
+            
+          }, 'next_finance');
+        });
+      }
+      
+      initLookup();
+    </script>
+  </html>
+</apex:page>
