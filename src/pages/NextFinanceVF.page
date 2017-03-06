@@ -1,4 +1,4 @@
-<apex:page >
+<apex:page standardController="Case">
     <html xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
     <head>
     <apex:includeLightning />
@@ -12,10 +12,12 @@
     </body>
     <script>
       function initLookup() {
-        
+        var caseId = "{!$CurrentPage.parameters.id}";
+        console.log(caseId);
+
         $Lightning.use("c:NextFinanceApp", function () {
           $Lightning.createComponent("c:NextFinance", {
-            
+             "vCaseId" : caseId 
           }, 'next_finance');
         });
       }
@@ -24,3 +26,5 @@
     </script>
   </html>
 </apex:page>
+
+

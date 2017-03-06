@@ -3,6 +3,7 @@
     <aura:attribute name="customerInteractionLevel" type="Object" />
     <aura:attribute name="lastCallResolutionIndex" type="Object" />
     <aura:attribute name="commentsAggregation" type="Object" />
+    <aura:attribute name="vCaseId" type="Id"/>
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
     
     <div class="slds-box slds-theme--default">
