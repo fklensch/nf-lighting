@@ -1,6 +1,10 @@
 public class NextFinance {
 	 @AuraEnabled
-    public static String getNextFinance (Id recordid) {
+    public static String getNextFinance (Id recordId) {
+        system.debug('PASSED IN ID'+ recordId);
+        Case objWOF = [SELECT AccountId FROM Case WHERE id=:recordId LIMIT 1];
+        system.debug('WOF FP record'+objWOF.AccountId);
+       
         //would want to add a method for getting account details using soql query from record id
         //callout here...
         //hardcoding response for demo purposes
